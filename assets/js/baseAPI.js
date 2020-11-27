@@ -15,7 +15,7 @@ $.ajaxPrefilter(function (params) {
     //对需要权限的接口配置头信息
     //必须以my开头
     if (params.url.indexOf('/my/') !== -1) {
-        params.header = {
+        params.headers = {
             Authorization: localStorage.getItem('token') || ''
         }
     }
